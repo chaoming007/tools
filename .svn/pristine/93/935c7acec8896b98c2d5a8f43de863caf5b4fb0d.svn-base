@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+
+    <title>点赞数字+1翻拍（30秒后才可用再点击）</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!--点赞 start-->
+<div class="zanbox">
+    <div class="dataStatistics">
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set set_last"></div>
+    </div>
+    <span class="add" id="add"></span><i class="" id="addone">+1</i></div>
+<!--点赞 end-->
+
+<!--点赞层 start-->
+<div class="zan-layer" style="display: none"><p>您是第<em id="sum-number">10,000,000</em>位为<br>中国汽车点赞的人！</p>
+    <div class="share-x"><a href="#" class="weibo">微博</a><a href="#" class="weixin">微信</a><a href="#"  class="qq">QQ空间</a></div>
+    <div class="close"></div>
+</div>
+<div class="zan-layer-bg" style="display: none"></div>
+<!--点赞层 end-->
+
+
+<!--script-->
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./js/number.js"></script>
+
+<script type="text/javascript">
+    //点赞
+    $(document).ready(function () {
+        $('.dataStatistics').dataStatistics({min: 100, max: 99999999, len: 8});
+    });
+
+</script>
+
+
+</body>
+</html>

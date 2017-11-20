@@ -1,0 +1,39 @@
+<!doctype html>
+
+<head>
+	<title>Cross Storage Hub</title>
+
+	<style type="text/css">
+		.no-app-download .app{
+			display: none;
+		}
+	</style>
+</head>
+
+<body class="no-app-download">
+	<script type="text/javascript" src="http://image.bitautoimg.com/cargroup/other/crossstorage/es6-promise.auto.min.js"></script>
+	<script type="text/javascript" src="http://image.bitautoimg.com/cargroup/other/crossstorage/client.js"></script>
+	<script type="text/javascript">
+		var storage = new CrossStorageClient('http://image.bitautoimg.com/cargroup/other/crossstorage/hubsession.html');
+		var setKeys = function() {
+			return storage.set('key1', 'cooperation');
+		};
+		storage.onConnect()
+			.then(setKeys)
+			.then(function() {
+				return storage.get('key1');
+			}).then(function(res) {
+				console.log(res);
+			})['catch'](function(err) {
+				console.log(err);
+			});
+	</script>
+	
+	
+	<div class="app">
+		广告下载
+	</div>
+	
+</body>
+
+</html>

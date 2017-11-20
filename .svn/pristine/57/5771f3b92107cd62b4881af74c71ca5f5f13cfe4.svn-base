@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection">
+		<title>媒体查询</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: #e75660;
+			}
+			.item1,.item2,.item3{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.item1{
+				background: url(mages/page3-title.png) 0 0 no-repeat;
+				background-size: 350px;
+				width: 350px;
+				height: 80px;
+				top: 7%;
+			}
+			.item2{
+				background: url(mages/page3-ren.png) 0 0 no-repeat;
+				background-size: 360px;
+				width: 360px;
+				height: 400px;
+				top: 44%;
+			}
+			.item3{
+				background: url(mages/page3-cmb.png) 0 0 no-repeat;
+				background-size: 350px;
+				width: 350px;
+				height: 220px;
+				top: 84%;
+			}
+			/**/
+			span{
+				display: none;
+				font-size: 50px;
+				z-index: 999;
+				position: absolute;
+				
+			}
+			/* 判断iphone4 */
+			/*@media screen 
+			and (device-width: 320px) 
+			and (device-height: 480px) 
+			and (-webkit-device-pixel-ratio: 2) {
+				#iphone4{
+					display: block;
+				}
+				#box{
+					transform: scale(0.8);
+				}
+			}*/
+			/* 判断iphone 4s & 5 */
+			@media screen and (min-device-width: 320px)  {
+				/* style */
+				#box{
+					transform: scale(0.8);
+				}
+				body{
+					background: #86c4c0;
+				}
+			}
+			/* 判断iphone6 */
+			@media screen and (min-device-width: 375px)   {
+				/* style */
+				#box{
+					transform: scale(0.9);
+				}
+				body{
+					background: #999;
+				}
+			}
+			
+			/* 判断iphone plus */
+			@media screen and (min-device-width: 414px)  {
+				/* style */
+				#box{
+					transform: scale(1);
+				}
+				body{
+					background: #5be2d9;
+				}
+			}
+			
+			
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<section>
+			<!--
+				三个区间
+				大于 iphone5 宽度 
+				大于 iphone6 宽度
+				大于 iphone6plus 宽度
+				
+			-->
+			<div id="box">
+				<div class="item1"></div>
+				<div class="item2"></div>
+				<div class="item3"></div>
+			</div>
+			
+		</section>
+	</body>
+	<script type="text/javascript">
+		document.getElementById("box").style.height = document.documentElement.clientHeight + "px";
+	</script>
+</html>

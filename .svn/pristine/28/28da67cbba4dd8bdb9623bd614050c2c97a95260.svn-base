@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*reset*/
+html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,input,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video,button{
+		margin: 0;
+		padding: 0;
+		border: 0;
+	    font: inherit;
+	    box-sizing: border-box;
+	}
+html{font-size:62.5%;}
+body{font-family:"Microsoft Yahei",Helvetica, Arial, sans-serif; background:#fff; line-height:1.5; color:#333;font-size:10px;}
+table{border-collapse:collapse; border-spacing:0}
+fieldset, img{border:0}
+legend{display:none}
+address, caption, cite, code, dfn, em, strong, th, var{font-style:normal; font-weight:normal}
+ol, ul{list-style:none}
+caption, th{text-align:left}
+h1, h2, h3, h4, h5, h6{font-size:100%; font-weight:normal}
+q:before, q:after{content:''}
+abbr, acronym{border:0}
+html{-webkit-text-size-adjust:none; } /*禁用iphone中safari的字号自动调整*/
+input[type="text"], input[type="button"], input[type="submit"], input[type="search"], input[type="number"]{-webkit-appearance:none; border-radius:0;} /*去除iphone默认样式（input的圆角）*/
+input[type="checkbox"]{margin:0 3px 3px 4px;}
+img{max-width:100%; vertical-align:middle}
+a{text-decoration:none; color:#333;}
+ins{text-decoration:none;}
+
+.clearfix:after {visibility:hidden; display:block; font-size:0; content:""; clear:both; height:0;}
+/*====reset end====*/
+/*
+*html *前缀只对IE6生效
+*+html *+前缀只对IE7生效
+@media screen\9{...}只对IE6/7生效
+@media \0screen {body { background: red; }}只对IE8有效
+@media \0screen\,screen\9{body { background: blue; }}只对IE6/7/8有效
+@media screen\0 {body { background: green; }} 只对IE8/9/10有效
+@media screen and (min-width:0\0) {body { background: gray; }} 只对IE9/10有效
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {body { background: orange; }} 只对IE10有效*/

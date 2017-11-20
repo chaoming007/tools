@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+
+    <title>数字自动翻牌</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!--点赞 start-->
+<div class="zanbox zanbox-auto">
+    <div class="dataStatistics">
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set"></div>
+        <div class="digit_set set_last"></div>
+    </div>
+    <span class="add" id="add"></span><i class="" id="addone">+1</i></div>
+<!--点赞 end-->
+
+
+
+
+<!--script-->
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./js/number-auto.js"></script>
+
+<script type="text/javascript">
+    //点赞
+    $(document).ready(function () {
+        $('.dataStatistics').dataStatistics({min: 100, max: 99999999, time: 99999999000, len: 8});
+    });
+
+</script>
+
+
+</body>
+</html>

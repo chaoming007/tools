@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>图片loading</title>
+		<style type="text/css">
+			#a {
+				background: url(http://image.bitautoimg.com/bitauto/focuspic/2016/12/201612873220993.jpg);
+			}
+			
+			#b {
+				/*background: url(http://image.bitautoimg.com/bitauto/2016/12/08/2fe395eb-5001-4ed1-8b39-1442060e697b.jpg);*/
+				background-image: linear-gradient( to left top, blue, red);
+			}
+			
+			#d {
+				background: url(image/faild-fly-3.png);
+				/*background-image: linear-gradient( to left top, blue, red);*/
+			}
+			
+			#e {
+				background: url(http://image.bitautoimg.com/bitauto/focuspic/2016/12/20161287353914.jpg);
+			}
+			
+			#f {
+				background: url(http://image.bitautoimg.com/bitauto/focuspic/2016/12/201612873643720.jpg);
+			}
+			#f::after{
+				content: "";
+				width: 100px;
+				height: 100px;
+				background:url(http://image.bitautoimg.com/uimg/chezhan/2017/shanghai/m/chezhan-star.png);
+				position: absolute;
+				right: 20%;
+				top: 0; 
+			}
+			#f::before{
+				content: "";
+				width: 100px;
+				height: 100px;
+				background:url(http://image.bitautoimg.com/bitauto/2017/04/12/782e4e41-4d07-44cf-981a-1072499bc7bc.jpg);
+				position: absolute;
+				right: 10%;
+				top: 0; 
+			}
+			#h::before{
+				
+				content: "";
+				width: 100px;
+				height: 100px;
+				background:url(http://gimg1.bitautoimg.com/ResourceFiles/0/3/360/20170331023220652.jpg);
+				position: absolute;
+				right: 10%;
+				top: 0; 
+			}
+			
+			div {
+				width: 100px;
+				height: 100px;
+				border: 1px #000 solid;
+				float: left;
+				/*background-image: linear-gradient();*/
+			}
+			
+			#box {
+				width: 100%;
+			}
+			
+			#img-loading-txt {
+				font-size: 80px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+			}
+			
+			img {
+				border: 1px #000 solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="img-loading-box">
+			<div id="a" style="width: 200px;"></div>
+			<div id="b"></div>
+			<div id="c"></div>
+			<div id="d"></div>
+			<img id="i" src="http://img1.bitautoimg.com/bitauto/2016/12/08/2d05f630-64f5-40b9-a30b-3c067b02460e.jpg">
+			<img id="j" src="http://gimg1.bitautoimg.com/ResourceFiles/0/3/322/20161202030104607.jpg">
+			<div id="e"></div>
+			<div id="f"></div>
+			<div id="g"></div>
+			<div id="h"></div>
+			<img id="k" src="image/faild-fly-2.png">
+			<img id="l" src="http://image.bitautoimg.com/bitauto/2016/12/08/7442cc23-f811-4724-ac6e-572d023a1ba6.jpg">
+		</div>
+
+		<div id="img-loading-txt">
+			0
+		</div>
+	</body>
+	<script type="text/javascript" src="imageLoading.js"></script>
+	<script type="text/javascript">
+	funImgLoading("img-loading-box","img-loading-txt",function(){
+				console.log("图片加载完成了");
+	});
+//loading 图片完成 做些什么
+//		function loadingComplete() {
+////			console.log("fun loadingComplete");
+//			if(sessionStorage.getItem("pageloaded")){
+//				console.log("图片加载完成了");
+//			}
+//		}
+//		loadingComplete();
+	</script>
+</html>

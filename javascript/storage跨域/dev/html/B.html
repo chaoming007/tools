@@ -1,0 +1,24 @@
+<!doctype html>
+
+<head>
+	<title>Cross Storage Hub</title>
+</head>
+
+<body>
+	<script type="text/javascript" src="http://image.bitautoimg.com/cargroup/other/crossstorage/es6-promise.auto.min.js"></script>
+	<script type="text/javascript" src="http://image.bitautoimg.com/cargroup/other/crossstorage/client.js"></script>
+	<script type="text/javascript">
+		var storage = new CrossStorageClient('http://image.bitautoimg.com/cargroup/other/crossstorage/hubsession.html');
+		storage.onConnect()
+			.then(function() {
+				return storage.get('key1', 'key2');
+			}).then(function(res) {
+				console.log(res); // ['foo', 'bar']
+			})['catch'](function(err) {
+				console.log(err);
+			});
+	</script>
+		<!--https://github.com/zendesk/cross-storage-->
+</body>
+
+</html>

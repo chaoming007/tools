@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            border: 5px solid rgb(118, 218, 255);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .wave {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(118, 218, 255);
+            border-radius: 50%;
+        }
+
+        .wave .w1,
+        .wave .w2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            bottom: 0;
+            left: 50%;
+            margin-left: -200px;
+            background-color: rgba(255, 255, 255, .4);
+            border-radius: 45%;
+            animation: rotate 6s linear infinite;
+            z-index: 10;
+            transition: bottom 2s;
+            /*bottom:20%*/
+        }
+
+        .wave .w2 {
+            border-radius: 47%;
+            background-color: rgba(255, 255, 255, .9);
+            animation: rotate 10s linear -5s infinite;
+            z-index: 20;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="wave js-tg">
+        <!--data-percent参数用来设置进度百分比高-->
+        <div data-percent="60" class="w1"></div>
+        <div data-percent="60" class="w2"></div>
+    </div>
+</div>
+<script>
+    /*
+     * JS实现类数组对象调用forEach()方法
+     */
+    HTMLCollection.prototype.toArray = function () {
+        return [].slice.call(this);
+    };
+
+
+    window.onload = function () {
+        document.getElementsByClassName('js-tg')[0].children.toArray().forEach(function (e, i) {
+            console.log(e + '->' + i);
+            e.style.bottom = e.getAttribute('data-percent') + '%';
+        });
+    };
+
+</script>
+</body>
+</html>

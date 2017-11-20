@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <meta name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+		<title>立即抽奖</title>
+		<link rel="stylesheet" type="text/css" href="../css/style-css.css" />
+	</head>
+	<body class="draw">
+		<div class="full-screen">
+			<img src="../img/draw.jpg" />
+			<div class="disk" id="lottery">
+				<ul>
+					<li class="lottery-unit lottery-unit-0">
+						<div class="box">
+							<div class="park">
+								<span>5M<br/>流量</span>
+							</div>
+						</div>
+					</li>
+					<li class="lottery-unit lottery-unit-1">
+						<div class="box">
+							<div class="park">
+								<span>10M<br/>流量</span>
+							</div>
+						</div>
+					</li>
+					<li  class="lottery-unit lottery-unit-2">
+						<div class="box">
+							<div class="park">
+								<span>40M<br/>流量</span>
+							</div>
+						</div>
+					</li>
+					<li  class="lottery-unit lottery-unit-7">
+						<div class="box">
+							<div class="park-1G">
+								<span>1G流量</span>
+								
+							</div>
+						</div>
+					</li>
+					<li  class="lottery-unit">
+						
+					</li>
+					<li  class="lottery-unit lottery-unit-3">
+						<div class="box">
+							<div class="park">
+								<span>50M<br/>流量</span>
+							</div>
+						</div>
+					</li>
+					<li  class="lottery-unit lottery-unit-6">
+						<div class="box">
+							<div class="park">
+								<span>100M<br/>流量</span>
+							</div>
+						</div>
+					</li>
+					<li  class="lottery-unit lottery-unit-5">
+						<div class="box">
+							<div class="park">
+								<span>200M<br/>流量</span>
+							</div>
+						</div>
+					</li>
+					<li  class="lottery-unit lottery-unit-4">
+						<div class="box">
+							<div class="park">
+								<span>500M<br/>流量</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<a class="lnk-blue" href="###">立即抽奖 (1)</a>
+		<a class="lnk-jh">查看我的奖品</a>
+		<div class="warp">
+			<div class="winners-list">
+					<div class="c-box">
+						<div class="title">
+							<h6>获奖名单</h6>
+						</div>
+						<div class="list">
+							<ul>
+								<li>恭喜<em>1869034****</em>获得100元京东卡</li>
+								<li>恭喜<em>1869034****</em>获得30M流量</li>
+								<li>
+									恭喜<em>1869034****</em>获得40M流量
+								</li>
+								<li>
+									恭喜<em>1869034****</em>获得50M流量
+								</li>
+								<li>
+									恭喜<em>1869034****</em>获得60M流量
+								</li>
+								<li>
+									恭喜<em>1869034****</em>获得70M流量
+								</li>
+								<li>
+									恭喜<em>1869034****</em>获得80M流量
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		  </div>
+		  <div class="content">
+			  	<div class="frist-title">
+					<h6>活动流程</h6>
+				</div>
+				<p>活动期间用户三个月内未活跃用户及APP的新用户将获得每日最多1G的流量赠送，活动期间可累加，上不封顶，分享活动页面，奖励机会翻倍哦，赶快注册易车APP领取每日不停的惊喜流量包吧！</p>
+			<div class="user-flow">
+				<p><i>1、</i>活动时间：8月21日-8月30日；</p>
+				<p><i>2、</i>参与范围：三个月内未活跃用户及APP的新用
+	     户参加；</p>
+	     		<p><i>3、</i>领取机制：活动期间用户每日登录易车APP将
+     免费获得一次抽取流量红包的机会；</p>
+     			<p><i>4、</i>分享翻倍：将活动页面分享给朋友将多一次抽
+     取机会（每天一次）；</p>
+     			<p><i>5、</i>红包额度：5M-1G不等，活动期间获得流量可
+     累加；</p>
+     			<p><i>6、</i>第三天奖励抽奖：用户参与活动的第三个自然天(可以不连续)，将获得最低100M-1G流量的奖励（总限额为2000G，抽完恢复正常抽取奖励）；</p>
+     			<p>
+     				<i>7、</i>
+     				流量提取规则：用户提取流量到手机，因为运
+     营商限制，必须以50M为一个兑换单位，其余
+     清零。例如用户有128M流量，提取流量到手
+     机后，手机将获得100M流量，其余清零；
+     			</p>
+		  </div>
+	</body>
+</html>
+<script src="../js/jquery-1.8.0.min.js"></script>
+<script src="../js/commons.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//循环列表
+		$('.list').scrollList().trigger('play');
+		//九宫格抽奖
+		var $draw = $('#lottery').draw9({
+			fnEnd:function(){
+				//获奖完成回调方法
+				console.log('您获取了' + this.prize +'等奖');
+			}
+		});
+		$('.lnk-blue').click(function(ev){
+			ev.preventDefault();
+			if ($draw.isclick) {
+                return false;
+            }
+            else {
+				$draw.trigger('play');
+				setTimeout(function(){
+					var i = Math.random() * ($draw.count - 1) | 0;
+					$draw.trigger('stop', i);
+	   	  	 	},2000);
+			}
+		})
+		
+	})
+</script>

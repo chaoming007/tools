@@ -1,0 +1,70 @@
+@charset "utf-8";
+/*reset*/
+html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font: inherit;
+		/*vertical-align: baseline;*/
+	}
+html{font-size:62.5%;}
+*{box-sizing: border-box;}
+body{font-family:Helvetica, Arial, sans-serif; background:#fff; line-height:150%; color:#333; }
+table{border-collapse:collapse; border-spacing:0}
+fieldset, img{border:0}
+legend{display:none}
+address, caption, cite, code, dfn, em, strong, th, var{font-style:normal; font-weight:normal}
+ol, ul{list-style:none}
+caption, th{text-align:left}
+h1, h2, h3, h4, h5, h6{font-size:100%; font-weight:normal}
+q:before, q:after{content:''}
+abbr, acronym{border:0}
+a{text-decoration:none; color:#333;}
+ins{text-decoration:none;}
+.clear{clear:both; height:0; overflow:hidden}
+img{max-width:100%;} /*液态图片*/
+video{margin-left:auto; margin-right:auto; max-width:100%} /*液态视频*/
+
+html{-webkit-text-size-adjust:none; } /*禁用iphone中safari的字号自动调整*/
+a,input,select,button{
+	-webkit-appearance:none; border-radius:0;      /*去除iphone默认样式（input的圆角）*/
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);   /* 点击高亮的颜色*/
+}
+/*禁用iphone中safari的字号自动调整*/
+input[type="text"],input[type="button"],input[type="submit"],input[type="search"],input[type="number"]{-webkit-appearance:none;border-radius:0;}
+
+/*去除iphone默认样式（input的圆角）*/
+input[type=text]::-ms-clear{display:none;width:0;height:0;}
+input[type=text]::-ms-reveal{display:none;width:0;height:0;}
+input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-results-button,input[type="search"]::-webkit-search-results-decoration{display:none;}
+input[type="checkbox"]{margin:0 3px 3px 4px;}
+
+
+/*柱状图*/
+.draw-canvas {font-size: 14px !important; margin-top: 40px; display: block; position: relative; margin-bottom: 50px; margin-left: 10px; margin-right: 10px;    }
+.draw-canvas .canvas-bg { width: 100%; }
+.draw-canvas .canvas-bg ul { list-style: none; }
+.draw-canvas .canvas-bg ul li { height: 15px; border-top: 1px solid #EFEFEF; }
+.draw-canvas .canvas-bg ul li:last-child { border-bottom: 1px solid #9E9E9E; }
+.draw-canvas .canvas-content { position: absolute; left: 0; z-index: 5; width: 100%; }
+.draw-canvas .canvas-content ul { list-style: none; display: table; width: 100%; }
+.draw-canvas .canvas-content ul li { width: 12.5%;  display: table-cell; position: relative; }
+.draw-canvas .canvas-content .cylinder { width: 30px; display: block; background-color:transparent;  margin: 0 auto 8px; position: relative;border-top-left-radius: 6px;border-top-right-radius: 6px; }
+.draw-canvas .canvas-content .cylinder i { position: absolute; background-color: #FF4F53; width: 100%; display: block; bottom: 0;border-top-left-radius: 6px;border-top-right-radius: 6px;}
+.draw-canvas .canvas-content strong::after{content: "辆";}
+.draw-canvas .canvas-content strong { position: absolute; bottom: -25px; width: 100%; text-align: center; font-size: 12px; color: #666; line-height: 12px; left: 0 }
+.draw-canvas .canvas-content span{ width: 100%; text-align: center; font-size: 12px; color: #666; line-height: 12px;margin-top: 10px; display:block}
+.draw-canvas .canvas-content strong {width: 100px;text-align: center; top: -20px; left: -35px;color: #333; font-weight: normal; }
+	 

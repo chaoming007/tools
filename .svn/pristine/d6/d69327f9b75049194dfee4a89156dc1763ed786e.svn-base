@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>benshen</title>
+	</head>
+	<body>
+		<script src="../js/wxshare-o.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+var wxs_js = new weiXinShareJs({
+'title' : '自定义标题标题',
+'desc': '描述小灰字儿啊小灰',
+'imgUrl':'http://chezhan.bitauto.com/shanghai/n2017/img/logo-b.png'
+});
+</script>
+	</body>
+</html>

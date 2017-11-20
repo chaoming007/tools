@@ -1,0 +1,1134 @@
+@charset "UTF-8";
+
+/*reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  /*vertical-align: baseline;*/
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  /*background:#fff;*/
+  line-height: 150%;
+  color: #333;
+  font-size: 12px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+legend {
+  display: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+ins {
+  text-decoration: none;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+/*reset end
+===================================================================================================================*/
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+/*禁用iphone中safari的字号自动调整*/
+
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+input[type="number"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/*去除iphone默认样式（input的圆角）*/
+
+input[type="checkbox"] {
+  margin: 0 3px 3px 4px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*液态图片*/
+
+video {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+/*液态视频*/
+
+/*公共属性*
+/*公共块*/
+
+.full-screen {
+  position: relative;
+}
+
+.full-screen img {
+  width: 100%;
+  display: block;
+}
+
+.lnk-blue {
+  width: 306px;
+  height: 64px;
+  background-image: url(../img/lnk-blue.png);
+  background-size: 306px 64px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 15px auto 0;
+  font-size: 1.8rem;
+  color: #fff !important;
+  line-height: 52px;
+  text-align: center;
+}
+
+.lnk-default {
+  width: 295px;
+  height: 56px;
+  background-image: url(../img/lnk-default.png);
+  background-size: 295px 56px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 225px auto 0;
+  text-align: center;
+  line-height: 66px;
+  font-size: 1.8rem;
+  color: #894000;
+  font-weight: bold;
+}
+
+.lnk-gray {
+  width: 295px;
+  height: 48px;
+  background-color: #d8cec3;
+  border-radius: 48px;
+  display: block;
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 15px auto 0;
+  text-align: center;
+  line-height: 48px;
+}
+
+.lnk-orange {
+  width: 295px;
+  height: 48px;
+  background-image: url(../img/lnk-orange.png);
+  background-size: 295px 48px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 15px auto 0;
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 48px;
+  text-align: center;
+}
+
+.lnk-more {
+  width: 295px;
+  height: 48px;
+  border: 1px solid #ff5500;
+  line-height: 48px;
+  font-size: 1.8rem;
+  color: #ff5500;
+  text-align: center;
+  border-radius: 48px;
+  display: block;
+  margin: 15px auto 0;
+  box-sizing: border-box;
+}
+
+/*获奖名单*/
+
+.winners-list {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-top: 5px;
+  padding: 0 15px 70px;
+  box-sizing: border-box;
+}
+
+.winners-list:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 22px;
+  background-image: url(../img/winners.png);
+  background-size: 100% 22px;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+}
+
+.winners-list .c-box {
+  width: 100%;
+  background-color: #ffe691;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.winners-list .c-box .title {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.winners-list .c-box .title h6 {
+  font-size: 1.8rem;
+  color: #894000;
+  display: inline;
+  position: relative;
+}
+
+.winners-list .c-box .title h6:before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 12px;
+  background-image: url(../img/public.png);
+  background-repeat: no-repeat;
+  background-size: 250px auto;
+  left: -90px;
+  top: 50%;
+  margin-top: -5px;
+  background-position: -141px -6px;
+}
+
+.winners-list .c-box .title h6:after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 12px;
+  background-image: url(../img/public.png);
+  background-repeat: no-repeat;
+  background-size: 250px auto;
+  right: -90px;
+  top: 50%;
+  margin-top: -5px;
+  background-position: -141px -6px;
+}
+
+.winners-list .c-box .list {
+  width: 100%;
+  text-align: center;
+  height: 85px;
+  overflow: hidden;
+  position: relative;
+}
+
+.winners-list .c-box .list ul {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+}
+
+.winners-list .c-box .list ul li {
+  width: 100%;
+  display: block;
+  font-size: 1.4rem;
+  color: #894000;
+  padding: 5px 0;
+}
+
+.winners-list .c-box .list ul li em {
+  color: #ff5400;
+}
+
+/*标题*/
+
+.frist-title {
+  width: 100%;
+  text-align: center;
+}
+
+.frist-title h6 {
+  font-size: 1.8rem;
+  color: #894000;
+  position: relative;
+  display: inline;
+}
+
+.frist-title h6:before {
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 19px;
+  background-image: url(../img/public.png);
+  background-repeat: no-repeat;
+  background-size: 250px auto;
+  background-position: 0 0;
+  left: -78px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.frist-title h6:after {
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 19px;
+  background-image: url(../img/public.png);
+  background-repeat: no-repeat;
+  background-size: 250px auto;
+  background-position: -74px 0;
+  right: -78px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.line-title {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.line-title h6 {
+  font-size: 1.5rem;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  width: 110px;
+}
+
+.line-title h6:before {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #bfbfbf;
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  margin-top: 0px;
+}
+
+.line-title h6:after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #bfbfbf;
+  position: absolute;
+  right: -90px;
+  top: 50%;
+  margin-top: 0px;
+}
+
+/*抽奖弹出*/
+
+.mark {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.mark-draw {
+  position: fixed;
+  width: 298px;
+  height: 297px;
+  background-color: #fff;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  margin-left: -149px;
+  margin-top: -149px;
+  z-index: 100;
+}
+
+.mark-draw.attention {
+  height: 250px;
+}
+
+.mark-draw.attention .mark-content p {
+  margin-top: 13px;
+}
+
+.mark-draw .img-box {
+  width: 100%;
+  height: 130px;
+  position: relative;
+  padding: 35px 0 20px;
+  box-sizing: border-box;
+}
+
+.mark-draw .img-box img {
+  width: 177px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: -5px;
+}
+
+.mark-draw .img-box .park-at {
+  position: absolute;
+  width: 263px;
+  height: 183px;
+  background-image: url(../img/mark-draw.-park.png);
+  background-size: 263px auto;
+  background-repeat: no-repeat;
+  top: -70px;
+  left: 50%;
+  margin-left: -132px;
+}
+
+.mark-draw .img-box .park-at em {
+  position: absolute;
+  font-size: 2.9rem;
+  color: #894000;
+  line-height: 30px;
+  width: 100px;
+  left: 50%;
+  margin-left: -53px;
+  text-align: center;
+  top: 60px;
+}
+
+.mark-draw .img-box .park-at em i {
+  font-size: 2.5rem;
+}
+
+.mark-draw .mark-content span {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #894000;
+  line-height: 25px;
+  display: block;
+}
+
+.mark-draw .mark-content p {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  width: 100%;
+  display: block;
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+.mark-draw .lnk {
+  width: 244px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  background-image: url(../img/mark-lnk.png);
+  background-size: 244px auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  margin-left: -122px;
+  bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.mark-draw.alt {
+  height: 250px;
+  margin-top: -125px;
+}
+
+.mark-draw.alt .img-box {
+  padding-top: 10px;
+}
+
+.mark-draw.alt .img-box img {
+  width: 250px;
+  height: 115px;
+}
+
+.mark-draw.alt .mark-content p {
+  color: #999;
+  margin-top: 10px;
+}
+
+.mark-draw.txt {
+  height: 250px;
+  margin-top: -125px;
+  padding: 38px 40px;
+  box-sizing: border-box;
+}
+
+.mark-draw.txt p {
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  display: block;
+  line-height: 24px;
+}
+
+.mark-draw.txt p em {
+  color: #ff5500;
+}
+
+.mark-draw.txt strong {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #666;
+  display: block;
+}
+
+.mark-draw.txt strong em {
+  color: #ff5500;
+}
+
+.mark-draw.txt1 {
+  height: 205px;
+  margin-top: -103px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.mark-draw.txt1 h6 {
+  font-size: 1.6rem;
+  color: #ff5500;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.mark-draw.txt1 p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 30px;
+}
+
+/*登录层*/
+
+.mark-login {
+  position: fixed;
+  width: 298px;
+  height: 220px;
+  background-color: #fff;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  margin-left: -149px;
+  margin-top: -149px;
+  z-index: 100;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+
+.mark-login p {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  line-height: 26px;
+  display: block;
+  width: 100%;
+}
+
+.mark-login .lnk-exit {
+  position: absolute;
+  width: 124px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #cacaca;
+  font-size: 1.8rem;
+  color: #666;
+  border-radius: 48px;
+  text-align: center;
+  left: 50%;
+  margin-left: -130px;
+  bottom: 20px;
+  box-sizing: border-box;
+}
+
+.mark-login .lnk-login {
+  position: absolute;
+  width: 124px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 1.8rem;
+  color: #fff;
+  border-radius: 48px;
+  text-align: center;
+  left: 50%;
+  margin-left: 5px;
+  bottom: 20px;
+  box-sizing: border-box;
+  background-image: url(../img/lnk-orange-min.png);
+  background-size: 124px auto;
+  background-repeat: no-repeat;
+}
+
+/*首页*/
+
+.index {
+  width: 100%;
+  background-color: #ffc600;
+  display: block;
+}
+
+.index .content {
+  padding: 10px 15px 0px;
+}
+
+.index .flow-img {
+  margin-top: 13px;
+}
+
+.index .foot-label {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  left: 0;
+  font-size: 1.2rem;
+  color: #904a08;
+  padding: 25px 0;
+}
+
+.index .full-screen .lnk {
+  position: absolute;
+  width: 263px;
+  height: 63px;
+  background-image: url(../img/btn-blue.png);
+  background-size: 263px 63px;
+  left: 50%;
+  margin-left: -132px;
+  bottom: 0;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+
+.index .winners-list {
+  margin-top: 15px;
+}
+
+/*活动流程*/
+
+.user-flow {
+  width: 100%;
+  display: block;
+  margin-top: 30px;
+}
+
+.user-flow p {
+  position: relative;
+  padding: 0 0 0 20px;
+  font-size: 1.4rem;
+  line-height: 24px;
+}
+
+.user-flow p i {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 0;
+}
+
+/*老用户页面*/
+
+.user {
+  width: 100%;
+  background-color: fff;
+  padding: 90px 15px 20px;
+  box-sizing: border-box;
+}
+
+.user .title {
+  width: 100%;
+  text-align: center;
+}
+
+.user .title h4 {
+  font-size: 2rem;
+  color: #666666;
+  line-height: 30px;
+}
+
+.user .title p {
+  font-size: 1.4rem;
+  color: #999;
+  line-height: 35px;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.user .full-screen {
+  padding: 0 20px;
+}
+
+.user .content {
+  padding: 40px 25px 20px;
+}
+
+.user .content .frist-title {
+  margin-bottom: 20px;
+}
+
+.user .content p {
+  font-size: 1.4rem;
+  color: 666;
+  line-height: 24px;
+}
+
+/*流量页*/
+
+.flow {
+  background-color: #fff;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.flow .warp {
+  padding: 20px 15px 0px;
+}
+
+.flow h4 {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #999;
+  text-align: center;
+  line-height: 20px;
+}
+
+.flow .ait {
+  width: 295px;
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 20px;
+  display: block;
+  margin: 30px auto 0;
+  padding: 0 0 0 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.flow .ait:before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-image: url(../img/public.png);
+  background-size: 250px auto;
+  background-repeat: no-repeat;
+  left: -10px;
+  top: 3px;
+  background-position: -214px -5px;
+}
+
+.flow .empty-txt {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  padding: 50px 0;
+}
+
+.flow .content {
+  padding: 10px 30px 50px;
+}
+
+.flow .content p {
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 22px;
+  margin-top: 30px;
+}
+
+.flow .full-screen .txt-box {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  bottom: 0;
+  text-align: center;
+}
+
+.flow .full-screen .txt-box em {
+  font-size: 1.6rem;
+  color: #ff7839;
+}
+
+.flow .full-screen .txt-box h6 {
+  font-size: 2.6rem;
+  color: #ff5500;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.flow .full-screen h4 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  bottom: 15px;
+  left: 0;
+}
+
+.flow .lnk-over {
+  border: 1px solid #d8cec3;
+  color: #d8cec3;
+}
+
+.flow .list {
+  padding: 20px 0 0;
+  list-style: none;
+}
+
+.flow .list li {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.flow .list li em {
+  color: #ff9b00;
+}
+
+.flow .more {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0 0;
+}
+
+.flow .more a {
+  display: inline;
+  font-size: 1.2rem;
+  color: #0072ff;
+  position: relative;
+}
+
+.flow .more a:after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 6px;
+  background-image: url(../img/public.png);
+  background-size: 250px auto;
+  background-repeat: no-repeat;
+  top: 50%;
+  margin-top: -3px;
+  right: -12px;
+  background-position: -232px -6px;
+}
+
+.flow .more a.up:after {
+  background-position: -232px -12px;
+}
+
+/*抽奖页*/
+
+.draw {
+  width: 100%;
+  display: block;
+  background-color: #ffc600;
+}
+
+.draw .disk {
+  position: absolute;
+  width: 314px;
+  height: 315px;
+  background-image: url(../img/disk.png);
+  background-size: 314px auto;
+  background-repeat: no-repeat;
+  left: 50%;
+  margin-left: -157px;
+  bottom: -214px;
+  box-sizing: border-box;
+  padding: 20px 30px 0px 20px;
+}
+
+.draw .disk ul {
+  list-style: none;
+}
+
+.draw .disk ul li {
+  float: left;
+  width: 33.33%;
+  height: 78px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.draw .disk ul li.current .box {
+  background-position: -2px -27px;
+}
+
+.draw .disk ul li.current .box .park {
+  background-position: 0px -158px;
+}
+
+.draw .disk ul li.current .box .park-1G {
+  background-position: -57px -112px;
+}
+
+.draw .disk ul li .box {
+  width: 78px;
+  height: 78px;
+  background-image: url(../img/public.png);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: -82px -27px;
+  position: relative;
+}
+
+.draw .disk ul li .box .park {
+  position: absolute;
+  width: 48px;
+  height: 56px;
+  background-image: url(../img/public.png);
+  background-size: 250px auto;
+  background-repeat: no-repeat;
+  background-position: 0px -105px;
+  left: 50%;
+  margin-left: -24px;
+  top: 50%;
+  margin-top: -28px;
+}
+
+.draw .disk ul li .box .park span {
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 12px;
+  display: block;
+  margin-top: 8px;
+  color: #9a704c;
+}
+
+.draw .disk ul li .box .park-1G {
+  position: absolute;
+  width: 56px;
+  height: 48px;
+  background-image: url(../img/public.png);
+  background-size: 250px auto;
+  background-repeat: no-repeat;
+  background-position: -57px -163px;
+  left: 50%;
+  margin-left: -28px;
+  top: 50%;
+  margin-top: -24px;
+}
+
+.draw .disk ul li .box .park-1G span {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+  left: 6px;
+}
+
+.draw .lnk-blue {
+  margin-top: 225px;
+}
+
+.draw .lnk-jh {
+  width: 290px;
+  height: 50px;
+  background-color: #ffae00;
+  border-radius: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #894000;
+  display: block;
+  margin: 10px auto 0;
+}
+
+.draw .warp {
+  padding: 0 15px;
+}
+
+.draw .warp .winners-list {
+  margin-top: 25px;
+  padding-bottom: 0;
+}
+
+.draw .content {
+  width: 100%;
+  display: block;
+  padding: 30px 30px;
+  box-sizing: border-box;
+}
+
+.draw .content p {
+  font-size: 1.4rem;
+  color: #894000;
+  line-height: 26px;
+  margin-top: 20px;
+}
+
+.draw .content .user-flow p {
+  color: #894000;
+  margin-top: 0;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>图片自适应</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			div.grid {
+				float: left;
+				width: 33.33333%;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			div.grid::before {
+				content: "";
+				/*3：2比例*/
+				padding-top: 66.666667%;
+				display: block;
+			}
+			
+			div.grid img {
+				min-width: 100%;
+				min-height: 100%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+			
+			
+			/*============================*/
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="row">
+			<div class="grid">
+				<img src="images/3.jpg">
+			</div>
+			<div class="grid">
+				<img src="images/2.jpg">
+			</div>
+			<div class="grid">
+				<img src="images/4.jpg">
+			</div>
+			<div class="grid">
+				<img src="images/3.jpg">
+			</div>
+			<div class="grid">
+				<img src="images/1.jpg">
+			</div>
+			<div class="grid">
+				<img src="images/3.jpg">
+			</div>
+		</div>-
+		
+
+	</body>
+
+</html>
